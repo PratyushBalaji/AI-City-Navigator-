@@ -2,67 +2,48 @@
 
 import { motion } from 'framer-motion';
 import { Brain, MapPin, Route, Video, CheckCircle } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 
-const loadingSteps = [
+export const loadingSteps = [
   {
+    key: 'research',
     icon: Brain,
     title: 'AI analyzing city data',
     description: 'Processing local attractions, weather, and cultural insights',
-    duration: 2000,
   },
   {
+    key: 'planner',
     icon: MapPin,
-    title: 'Finding the best places',
-    description: 'Discovering hidden gems and must-visit locations',
-    duration: 2500,
+    title: 'Building your itinerary',
+    description: 'Structuring days, places, and route logic from the live research packet',
   },
   {
+    key: 'prompt_polish',
     icon: Route,
-    title: 'Optimizing travel routes',
-    description: 'Creating efficient itineraries with minimal travel time',
-    duration: 2000,
+    title: 'Refining media prompts',
+    description: 'Preparing destination-grounded prompts for visual generation',
   },
   {
+    key: 'canvas',
     icon: Video,
-    title: 'Generating video preview',
-    description: 'Creating an immersive AI travel video for your trip',
-    duration: 3000,
+    title: 'Generating trip visuals',
+    description: 'Creating image previews for the highlighted itinerary moments',
   },
 ];
 
-interface AIGenerationLoadingProps {
-  isLoading: boolean;
-  onComplete: () => void;
+export interface LoadingStepState {
+  key: string;
+  status: 'pending' | 'active' | 'complete';
+  message?: string;
 }
 
-export default function AIGenerationLoading({ isLoading, onComplete }: AIGenerationLoadingProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
+interface AIGenerationLoadingProps {
+  isLoading: boolean;
+  steps: LoadingStepState[];
+  helperText?: ReactNode;
+}
 
-  useEffect(() => {
-    if (!isLoading) return;
-
-    let timeoutId: NodeJS.Timeout;
-
-    const runSteps = async () => {
-      for (let i = 0; i < loadingSteps.length; i++) {
-        setCurrentStep(i);
-        await new Promise(resolve => {
-          timeoutId = setTimeout(resolve, loadingSteps[i].duration);
-        });
-        setCompletedSteps(prev => [...prev, i]);
-      }
-      onComplete();
-    };
-
-    runSteps();
-
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
-    };
-  }, [isLoading, onComplete]);
-
+export default function AIGenerationLoading({ isLoading, steps, helperText }: AIGenerationLoadingProps) {
   if (!isLoading) return null;
 
   return (
@@ -86,13 +67,16 @@ export default function AIGenerationLoading({ isLoading, onComplete }: AIGenerat
             <Brain className="w-8 h-8 text-white" />
           </motion.div>
           <h3 className="text-2xl font-bold text-white mb-2">Generating Your AI Trip</h3>
-          <p className="text-gray-300">Please wait while our AI creates your perfect itinerary...</p>
+          <p className="text-gray-300">Please wait while our AI creates your itinerary and visuals...</p>
         </div>
 
+        {helperText && <div className="mb-6 text-center text-sm text-cyan-200">{helperText}</div>}
+
         <div className="space-y-4">
-          {loadingSteps.map((step, index) => {
-            const isCompleted = completedSteps.includes(index);
-            const isCurrent = currentStep === index;
+          {loadingSteps.map((step) => {
+            const state = steps.find(candidate => candidate.key === step.key);
+            const isCompleted = state?.status === 'complete';
+            const isCurrent = state?.status === 'active';
 
             return (
               <motion.div
@@ -123,14 +107,14 @@ export default function AIGenerationLoading({ isLoading, onComplete }: AIGenerat
                     {step.title}
                   </h4>
                   <p className={`text-sm ${isCompleted ? 'text-green-200' : 'text-gray-400'}`}>
-                    {step.description}
+                    {state?.message || step.description}
                   </p>
                   {isCurrent && (
                     <motion.div
                       className="mt-2 h-1 bg-white/20 rounded-full overflow-hidden"
                       initial={{ width: 0 }}
                       animate={{ width: '100%' }}
-                      transition={{ duration: loadingSteps[index].duration / 1000, ease: "easeInOut" }}
+                      transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
                     >
                       <div className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
                     </motion.div>

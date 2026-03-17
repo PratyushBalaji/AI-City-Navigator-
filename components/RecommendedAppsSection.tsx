@@ -1,54 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Smartphone, Star, ExternalLink } from 'lucide-react';
+import { Smartphone, ExternalLink } from 'lucide-react';
+import type { RecommendedApp } from '../lib/trip-types';
 
-const apps = [
-  {
-    name: 'Uber',
-    icon: '🚗',
-    description: 'Ride sharing and transportation',
-    rating: 4.8,
-    category: 'Transport',
-  },
-  {
-    name: 'Transit',
-    icon: '🚌',
-    description: 'Public transportation schedules',
-    rating: 4.6,
-    category: 'Transport',
-  },
-  {
-    name: 'Eventbrite',
-    icon: '🎭',
-    description: 'Local events and experiences',
-    rating: 4.7,
-    category: 'Events',
-  },
-  {
-    name: 'Yelp',
-    icon: '🍽️',
-    description: 'Restaurant reviews and dining',
-    rating: 4.5,
-    category: 'Food',
-  },
-  {
-    name: 'TripAdvisor',
-    icon: '🗺️',
-    description: 'Travel reviews and attractions',
-    rating: 4.4,
-    category: 'Travel',
-  },
-  {
-    name: 'Spotify',
-    icon: '🎵',
-    description: 'Local music and playlists',
-    rating: 4.9,
-    category: 'Entertainment',
-  },
-];
+interface RecommendedAppsSectionProps {
+  apps: RecommendedApp[];
+}
 
-export default function RecommendedAppsSection() {
+const appIcons: Record<string, string> = {
+  transport: '🚗',
+  navigation: '🗺️',
+  food: '🍽️',
+  events: '🎭',
+  activities: '📍',
+  utility: '📱',
+};
+
+export default function RecommendedAppsSection({ apps }: RecommendedAppsSectionProps) {
   return (
     <section className="py-16 px-6 max-w-6xl mx-auto">
       <motion.div
@@ -80,7 +49,7 @@ export default function RecommendedAppsSection() {
           >
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center space-x-3">
-                <div className="text-4xl">{app.icon}</div>
+                <div className="text-4xl">{appIcons[app.category.toLowerCase()] ?? '📱'}</div>
                 <div>
                   <h3 className="text-xl font-semibold text-white">{app.name}</h3>
                   <span className="text-sm text-gray-400 bg-white/10 px-2 py-1 rounded-full">
@@ -88,13 +57,9 @@ export default function RecommendedAppsSection() {
                   </span>
                 </div>
               </div>
-              <div className="flex items-center space-x-1">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <span className="text-sm text-gray-300">{app.rating}</span>
-              </div>
             </div>
 
-            <p className="text-gray-400 mb-6 leading-relaxed">{app.description}</p>
+            <p className="text-gray-400 mb-6 leading-relaxed">{app.reason}</p>
 
             <motion.button
               whileHover={{ scale: 1.05 }}

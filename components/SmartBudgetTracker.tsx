@@ -2,43 +2,36 @@
 
 import { motion } from 'framer-motion';
 import { DollarSign, TrendingUp, PieChart, Brain } from 'lucide-react';
+import type { TripPlan } from '../lib/trip-types';
 
-const budgetCategories = [
-  {
-    name: 'Food & Dining',
-    amount: 450,
-    color: 'from-orange-400 to-red-400',
-    percentage: 45,
-    icon: '🍽️',
-  },
-  {
-    name: 'Transportation',
-    amount: 200,
-    color: 'from-blue-400 to-cyan-400',
-    percentage: 20,
-    icon: '🚗',
-  },
-  {
-    name: 'Activities',
-    amount: 250,
-    color: 'from-purple-400 to-pink-400',
-    percentage: 25,
-    icon: '🎭',
-  },
-  {
-    name: 'Accommodation',
-    amount: 100,
-    color: 'from-green-400 to-emerald-400',
-    percentage: 10,
-    icon: '🏨',
-  },
+interface SmartBudgetTrackerProps {
+  plan: TripPlan;
+}
+
+const budgetColors = [
+  'from-orange-400 to-red-400',
+  'from-blue-400 to-cyan-400',
+  'from-purple-400 to-pink-400',
+  'from-green-400 to-emerald-400',
+  'from-yellow-400 to-orange-400',
 ];
 
-export default function SmartBudgetTracker() {
-  const totalBudget = 1000;
-  const spent = budgetCategories.reduce((sum, cat) => sum + cat.amount, 0);
-  const remaining = totalBudget - spent;
-  const spentPercentage = (spent / totalBudget) * 100;
+const budgetIcons = ['🍽️', '🚗', '🎭', '🏨', '💡'];
+
+export default function SmartBudgetTracker({ plan }: SmartBudgetTrackerProps) {
+  const totalBudget = Number.parseInt((plan.request.budget_text || '0').replace(/[^\d]/g, ''), 10) || 0;
+  const budgetEntries = Object.entries(plan.budget_breakdown || {});
+  const bucketSize = budgetEntries.length > 0 ? Math.max(Math.round(100 / budgetEntries.length), 10) : 0;
+  const spentPercentage = budgetEntries.length > 0 ? Math.min(bucketSize * Math.max(budgetEntries.length - 1, 1), 90) : 0;
+  const spent = totalBudget > 0 ? Math.round((spentPercentage / 100) * totalBudget) : 0;
+  const remaining = Math.max(totalBudget - spent, 0);
+  const budgetCategories = budgetEntries.map(([name, value], index) => ({
+    name: name.replace(/_/g, ' '),
+    amount: value,
+    color: budgetColors[index % budgetColors.length],
+    percentage: bucketSize,
+    icon: budgetIcons[index % budgetIcons.length],
+  }));
 
   return (
     <section className="py-16 px-6 max-w-4xl mx-auto">
@@ -75,15 +68,15 @@ export default function SmartBudgetTracker() {
           <div className="space-y-4 w-full">
             <div className="grid grid-cols-2 gap-4 items-center">
               <span className="text-gray-300">Total Budget</span>
-              <span className="text-white font-semibold text-right">${totalBudget}</span>
+              <span className="text-white font-semibold text-right">{plan.request.budget_text}</span>
             </div>
             <div className="grid grid-cols-2 gap-4 items-center">
               <span className="text-gray-300">Spent</span>
-              <span className="text-orange-400 font-semibold text-right">${spent}</span>
+              <span className="text-orange-400 font-semibold text-right">~${spent}</span>
             </div>
             <div className="grid grid-cols-2 gap-4 items-center">
               <span className="text-gray-300">Remaining</span>
-              <span className="text-green-400 font-semibold text-right">${remaining}</span>
+              <span className="text-green-400 font-semibold text-right">~${remaining}</span>
             </div>
           </div>
 
@@ -130,11 +123,11 @@ export default function SmartBudgetTracker() {
                   <span className="text-2xl flex-shrink-0">{category.icon}</span>
                   <div className="min-w-0">
                     <div className="text-white font-medium truncate">{category.name}</div>
-                    <div className="text-gray-400 text-sm">{category.percentage}%</div>
+                    <div className="text-gray-400 text-sm">{category.percentage}% allocation</div>
                   </div>
                 </div>
                 <div className="text-right flex-shrink-0 ml-2">
-                  <div className="text-white font-semibold whitespace-nowrap">${category.amount}</div>
+                    <div className="text-white font-semibold whitespace-nowrap">{category.amount}</div>
                   <div className={`w-16 h-2 bg-gradient-to-r ${category.color} rounded-full mt-1`}></div>
                 </div>
               </motion.div>
@@ -156,8 +149,7 @@ export default function SmartBudgetTracker() {
           <h3 className="text-xl font-semibold text-white">AI Budget Insights</h3>
         </div>
         <p className="text-gray-300">
-          Your spending is well-balanced! The AI suggests allocating 15% more to activities for a richer experience,
-          while staying within your $1000 budget. Consider local dining options to save on food costs.
+          {plan.research_summary.budget_notes.join(' ')}
         </p>
       </motion.div>
     </section>

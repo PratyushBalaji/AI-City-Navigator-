@@ -1,0 +1,183 @@
+{
+  "request": {
+    "destination": "Bengaluru",
+    "duration_days": 2,
+    "budget_text": "1200",
+    "travel_month": "December",
+    "travel_style": "balanced",
+    "interests": [
+      "food",
+      "culture"
+    ]
+  },
+  "research_summary": {
+    "city_summary": "No destination-specific provider is configured yet, so this research packet is generic.",
+    "seasonal_context": "Cool or cold season context. Shorter daylight and heavier outerwear may matter.",
+    "transport_notes": [
+      "Use live maps data before production launch."
+    ],
+    "budget_notes": [
+      "Budget guidance is approximate because prices were not sourced from live providers."
+    ]
+  },
+  "places": [
+    {
+      "name": "Central district in Bengaluru",
+      "category": "district",
+      "neighborhood": "central area",
+      "best_time_of_day": "afternoon",
+      "estimated_duration_minutes": 150,
+      "crowd_level_estimate": "medium",
+      "general_description": "Generic downtown exploration block used because no destination-specific provider is wired yet.",
+      "things_to_do": [
+        "walk main streets",
+        "sample local food",
+        "visit a top landmark"
+      ],
+      "source_confidence": "low"
+    }
+  ],
+  "itinerary_days": [
+    {
+      "day": 1,
+      "theme": "Bengaluru day 1",
+      "items": [
+        {
+          "item_id": "day1-morning",
+          "title": "Explore Central district in Bengaluru",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Central district in Bengaluru",
+          "neighborhood": "central area",
+          "activity_type": "district",
+          "estimated_cost": "$25-40",
+          "transit_note": "Use live maps data before production launch.",
+          "why_this_fits": "Fits food, culture and works best in the afternoon."
+        },
+        {
+          "item_id": "day1-evening",
+          "title": "Slow evening around Central district in Bengaluru",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Central district in Bengaluru",
+          "neighborhood": "central area",
+          "activity_type": "district",
+          "estimated_cost": "$35-60",
+          "transit_note": "Use live maps data before production launch.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "Bengaluru day 2",
+      "items": [
+        {
+          "item_id": "day2-morning",
+          "title": "Explore Central district in Bengaluru",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Central district in Bengaluru",
+          "neighborhood": "central area",
+          "activity_type": "district",
+          "estimated_cost": "$25-40",
+          "transit_note": "Use live maps data before production launch.",
+          "why_this_fits": "Fits food, culture and works best in the afternoon."
+        },
+        {
+          "item_id": "day2-evening",
+          "title": "Slow evening around Central district in Bengaluru",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Central district in Bengaluru",
+          "neighborhood": "central area",
+          "activity_type": "district",
+          "estimated_cost": "$35-60",
+          "transit_note": "Use live maps data before production launch.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    }
+  ],
+  "recommended_apps": [
+    {
+      "name": "Google Maps",
+      "category": "navigation",
+      "reason": "Baseline navigation and place lookup."
+    },
+    {
+      "name": "Uber",
+      "category": "transport",
+      "reason": "Fallback point-to-point transport."
+    }
+  ],
+  "budget_breakdown": {
+    "lodging": "35-45% of total budget",
+    "food": "20-25% of total budget",
+    "transport": "10-15% of total budget",
+    "activities": "15-25% of total budget",
+    "buffer": "10% contingency"
+  },
+  "warnings": [
+    "Destination facts are generic placeholders.",
+    "Weather, opening hours, and event details should be verified with live APIs."
+  ],
+  "media_scenes": [
+    {
+      "scene_id": "scene-day1-morning",
+      "itinerary_item_id": "day1-morning",
+      "title": "Morning at Central district in Bengaluru",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Bengaluru featuring Central district in Bengaluru in central area during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day1-evening",
+      "itinerary_item_id": "day1-evening",
+      "title": "Evening at Central district in Bengaluru",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Bengaluru featuring Central district in Bengaluru in central area during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day2-morning",
+      "itinerary_item_id": "day2-morning",
+      "title": "Morning at Central district in Bengaluru",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Bengaluru featuring Central district in Bengaluru in central area during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day2-evening",
+      "itinerary_item_id": "day2-evening",
+      "title": "Evening at Central district in Bengaluru",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Bengaluru featuring Central district in Bengaluru in central area during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    }
+  ]
+}

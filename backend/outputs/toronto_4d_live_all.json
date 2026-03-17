@@ -1,0 +1,395 @@
+{
+  "request": {
+    "destination": "Toronto",
+    "duration_days": 4,
+    "budget_text": "2200",
+    "travel_month": "August",
+    "travel_style": "balanced",
+    "interests": [
+      "food",
+      "culture",
+      "photography"
+    ]
+  },
+  "research_summary": {
+    "city_summary": "Toronto is the most populous city in Canada and the capital of Ontario. It is known for its cultural diversity, business, finance, arts, sports, and cosmopolitan atmosphere.",
+    "seasonal_context": "In August, Toronto experiences warm summer weather with average temperatures ranging from 20\u00b0C to 28\u00b0C. It's an ideal time for outdoor activities and exploring the city's parks and waterfront.",
+    "transport_notes": [
+      "Toronto has an extensive public transit system including buses, streetcars, and the subway. Consider getting a Presto card for convenient travel.",
+      "Walking and biking are popular ways to explore the city, especially in areas like the Distillery District and along the waterfront."
+    ],
+    "budget_notes": [
+      "With a budget of $2200 for 4 days, you have approximately $550 per day. This should comfortably cover accommodation, food, transportation, and some activities.",
+      "Toronto can be expensive, especially for dining and attractions, so plan accordingly."
+    ]
+  },
+  "places": [
+    {
+      "name": "Distillery District",
+      "category": "Historic Site",
+      "neighborhood": "Downtown",
+      "best_time_of_day": "Evening",
+      "estimated_duration_minutes": 120,
+      "crowd_level_estimate": "Moderate to High",
+      "general_description": "A pedestrian zone filled with Victorian industrial architecture, now home to shops, restaurants, and galleries.",
+      "things_to_do": [
+        "Explore the cobblestone streets",
+        "Visit art galleries and boutiques",
+        "Enjoy a meal at one of the many restaurants"
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "CN Tower",
+      "category": "Landmark",
+      "neighborhood": "Downtown",
+      "best_time_of_day": "Afternoon",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "High",
+      "general_description": "An iconic communications and observation tower standing at 553.3 meters tall.",
+      "things_to_do": [
+        "Visit the observation decks",
+        "Try the EdgeWalk for a thrilling experience",
+        "Enjoy a meal at the 360 Restaurant"
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "Kensington Market",
+      "category": "Market",
+      "neighborhood": "Chinatown",
+      "best_time_of_day": "Afternoon",
+      "estimated_duration_minutes": 120,
+      "crowd_level_estimate": "High",
+      "general_description": "A vibrant pedestrian market with diverse shops, cafes, and street food.",
+      "things_to_do": [
+        "Browse unique shops",
+        "Try street food from various vendors",
+        "Visit art galleries and cafes"
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "Royal Ontario Museum",
+      "category": "Museum",
+      "neighborhood": "Midtown",
+      "best_time_of_day": "Morning",
+      "estimated_duration_minutes": 240,
+      "crowd_level_estimate": "Moderate",
+      "general_description": "One of the largest and most-visited museums in North America, featuring diverse collections from world cultures and natural history.",
+      "things_to_do": [
+        "Explore the dinosaur exhibits",
+        "Visit the Crystal Gallery",
+        "Attend special exhibitions"
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "High Park",
+      "category": "Park",
+      "neighborhood": "West End",
+      "best_time_of_day": "Morning or Afternoon",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "Moderate",
+      "general_description": "A large urban park offering greenery, trails, and the High Park Zoo.",
+      "things_to_do": [
+        "Picnic in the park",
+        "Visit the High Park Zoo",
+        "Explore the trails and gardens"
+      ],
+      "source_confidence": "High"
+    }
+  ],
+  "itinerary_days": [
+    {
+      "day": 1,
+      "theme": "Cultural Exploration",
+      "items": [
+        {
+          "item_id": "1",
+          "title": "Visit Royal Ontario Museum",
+          "start_time": "09:00",
+          "end_time": "13:00",
+          "place_name": "Royal Ontario Museum",
+          "neighborhood": "Midtown",
+          "activity_type": "Museum Visit",
+          "estimated_cost": "25",
+          "transit_note": "Take the subway to Museum Station.",
+          "why_this_fits": "Aligns with interest in culture and museum visits."
+        },
+        {
+          "item_id": "2",
+          "title": "Lunch at Kensington Market",
+          "start_time": "13:00",
+          "end_time": "14:00",
+          "place_name": "Kensington Market",
+          "neighborhood": "Chinatown",
+          "activity_type": "Dining",
+          "estimated_cost": "20",
+          "transit_note": "Take the streetcar to Spadina Ave.",
+          "why_this_fits": "Aligns with interest in food and market exploration."
+        },
+        {
+          "item_id": "3",
+          "title": "Explore Distillery District",
+          "start_time": "14:00",
+          "end_time": "16:00",
+          "place_name": "Distillery District",
+          "neighborhood": "Downtown",
+          "activity_type": "Walking Tour",
+          "estimated_cost": "0",
+          "transit_note": "Walk from Kensington Market.",
+          "why_this_fits": "Aligns with interest in historic sites and photography."
+        },
+        {
+          "item_id": "4",
+          "title": "Dinner at Distillery District",
+          "start_time": "18:00",
+          "end_time": "19:30",
+          "place_name": "Distillery District",
+          "neighborhood": "Downtown",
+          "activity_type": "Dining",
+          "estimated_cost": "30",
+          "transit_note": "Walk to a restaurant.",
+          "why_this_fits": "Aligns with interest in food and culture."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "Landmark and Outdoor Activities",
+      "items": [
+        {
+          "item_id": "5",
+          "title": "Visit CN Tower",
+          "start_time": "10:00",
+          "end_time": "13:00",
+          "place_name": "CN Tower",
+          "neighborhood": "Downtown",
+          "activity_type": "Observation Deck Visit",
+          "estimated_cost": "35",
+          "transit_note": "Take the subway to Union Station.",
+          "why_this_fits": "Aligns with interest in landmarks and photography."
+        },
+        {
+          "item_id": "6",
+          "title": "Lunch at CN Tower",
+          "start_time": "13:00",
+          "end_time": "14:00",
+          "place_name": "CN Tower",
+          "neighborhood": "Downtown",
+          "activity_type": "Dining",
+          "estimated_cost": "25",
+          "transit_note": "Walk to the 360 Restaurant.",
+          "why_this_fits": "Aligns with interest in food."
+        },
+        {
+          "item_id": "7",
+          "title": "Picnic at High Park",
+          "start_time": "14:00",
+          "end_time": "16:00",
+          "place_name": "High Park",
+          "neighborhood": "West End",
+          "activity_type": "Picnic",
+          "estimated_cost": "10",
+          "transit_note": "Take the subway to High Park Station.",
+          "why_this_fits": "Aligns with interest in parks and outdoor activities."
+        },
+        {
+          "item_id": "8",
+          "title": "Explore High Park Zoo",
+          "start_time": "16:00",
+          "end_time": "17:00",
+          "place_name": "High Park",
+          "neighborhood": "West End",
+          "activity_type": "Zoo Visit",
+          "estimated_cost": "5",
+          "transit_note": "Walk within the park.",
+          "why_this_fits": "Aligns with interest in parks and photography."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "theme": "Market Exploration",
+      "items": [
+        {
+          "item_id": "9",
+          "title": "Explore Kensington Market",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "place_name": "Kensington Market",
+          "neighborhood": "Chinatown",
+          "activity_type": "Market Visit",
+          "estimated_cost": "0",
+          "transit_note": "Walk from previous location.",
+          "why_this_fits": "Aligns with interest in markets and food."
+        },
+        {
+          "item_id": "10",
+          "title": "Lunch at Kensington Market",
+          "start_time": "12:00",
+          "end_time": "13:00",
+          "place_name": "Kensington Market",
+          "neighborhood": "Chinatown",
+          "activity_type": "Dining",
+          "estimated_cost": "20",
+          "transit_note": "Walk to a restaurant.",
+          "why_this_fits": "Aligns with interest in food."
+        },
+        {
+          "item_id": "11",
+          "title": "Visit Toronto Islands",
+          "start_time": "13:00",
+          "end_time": "16:00",
+          "place_name": "Toronto Islands",
+          "neighborhood": "Downtown",
+          "activity_type": "Beach and Park Visit",
+          "estimated_cost": "10",
+          "transit_note": "Take the ferry from Jack Layton Ferry Terminal.",
+          "why_this_fits": "Aligns with interest in parks and outdoor activities."
+        },
+        {
+          "item_id": "12",
+          "title": "Dinner at Toronto Islands",
+          "start_time": "16:00",
+          "end_time": "17:30",
+          "place_name": "Toronto Islands",
+          "neighborhood": "Downtown",
+          "activity_type": "Dining",
+          "estimated_cost": "30",
+          "transit_note": "Walk to a restaurant.",
+          "why_this_fits": "Aligns with interest in food and photography."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "theme": "Relaxation and Leisure",
+      "items": [
+        {
+          "item_id": "13",
+          "title": "Relax at High Park",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "place_name": "High Park",
+          "neighborhood": "West End",
+          "activity_type": "Picnic",
+          "estimated_cost": "10",
+          "transit_note": "Take the subway to High Park Station.",
+          "why_this_fits": "Aligns with interest in parks and relaxation."
+        },
+        {
+          "item_id": "14",
+          "title": "Lunch at High Park",
+          "start_time": "12:00",
+          "end_time": "13:00",
+          "place_name": "High Park",
+          "neighborhood": "West End",
+          "activity_type": "Dining",
+          "estimated_cost": "20",
+          "transit_note": "Walk to a restaurant.",
+          "why_this_fits": "Aligns with interest in food."
+        },
+        {
+          "item_id": "15",
+          "title": "Explore Distillery District",
+          "start_time": "14:00",
+          "end_time": "16:00",
+          "place_name": "Distillery District",
+          "neighborhood": "Downtown",
+          "activity_type": "Walking Tour",
+          "estimated_cost": "0",
+          "transit_note": "Take the streetcar to Distillery Loop.",
+          "why_this_fits": "Aligns with interest in historic sites and photography."
+        },
+        {
+          "item_id": "16",
+          "title": "Dinner at Distillery District",
+          "start_time": "18:00",
+          "end_time": "19:30",
+          "place_name": "Distillery District",
+          "neighborhood": "Downtown",
+          "activity_type": "Dining",
+          "estimated_cost": "30",
+          "transit_note": "Walk to a restaurant.",
+          "why_this_fits": "Aligns with interest in food and culture."
+        }
+      ]
+    }
+  ],
+  "recommended_apps": [
+    {
+      "name": "TTC App",
+      "category": "Transit",
+      "reason": "Provides real-time transit information for Toronto's public transportation system."
+    },
+    {
+      "name": "OpenTable",
+      "category": "Dining",
+      "reason": "Helps you discover and book restaurants in Toronto."
+    },
+    {
+      "name": "TripIt",
+      "category": "Travel Organization",
+      "reason": "Organizes your travel plans, including flights, hotels, and reservations."
+    }
+  ],
+  "budget_breakdown": {
+    "lodging": "700",
+    "food": "600",
+    "transport": "200",
+    "activities": "500",
+    "buffer": "200"
+  },
+  "warnings": [
+    "Toronto can be busy during the summer months, especially in popular tourist areas. Plan accordingly to avoid crowds.",
+    "Be mindful of your belongings in crowded areas and use public transportation safely."
+  ],
+  "media_scenes": [
+    {
+      "scene_id": "1",
+      "itinerary_item_id": "1",
+      "title": "Royal Ontario Museum",
+      "priority": "High",
+      "prompt": "A photorealistic image capturing the diverse collections and exhibits within the Royal Ontario Museum. The scene should be bathed in natural light, highlighting the intricate details of the artifacts and displays. The time of day should be early afternoon to ensure ample daylight, and the crowd level should be moderate to avoid any distractions.",
+      "style_rules": [
+        "Use natural light",
+        "Focus on details"
+      ]
+    },
+    {
+      "scene_id": "2",
+      "itinerary_item_id": "3",
+      "title": "Distillery District",
+      "priority": "High",
+      "prompt": "A photorealistic image capturing the Victorian architecture and cobblestone streets of the Distillery District. The photo should be taken with a wide-angle lens to encompass the historic charm of the area. The weather should be clear and sunny, with the season being late spring or early summer to showcase the vibrant greenery. The crowd level should be moderate, with a few visitors exploring the area.",
+      "style_rules": [
+        "Use wide-angle shots",
+        "Focus on the historic charm"
+      ]
+    },
+    {
+      "scene_id": "3",
+      "itinerary_item_id": "5",
+      "title": "CN Tower",
+      "priority": "High",
+      "prompt": "A photorealistic image capturing the panoramic views from the observation deck of the CN Tower. The photo should be taken using a tripod to ensure stability and sharpness, focusing on the expansive cityscape below. The time of day should be late afternoon to capture the golden hour, with the weather being clear and the crowd level being moderate.",
+      "style_rules": [
+        "Use a tripod",
+        "Focus on the cityscape"
+      ]
+    },
+    {
+      "scene_id": "4",
+      "itinerary_item_id": "7",
+      "title": "High Park",
+      "priority": "Medium",
+      "prompt": "A photorealistic image capturing the greenery and trails of High Park. The photo should be taken using a drone to provide an aerial view of the park's natural beauty. The season should be early autumn, with the weather being mild and clear. The crowd level should be low to highlight the serene environment.",
+      "style_rules": [
+        "Use a drone for aerial shots",
+        "Focus on the natural beauty"
+      ]
+    }
+  ]
+}

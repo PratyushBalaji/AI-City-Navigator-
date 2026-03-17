@@ -1,0 +1,329 @@
+{
+  "request": {
+    "destination": "Toronto",
+    "duration_days": 4,
+    "budget_text": "2200",
+    "travel_month": "August",
+    "travel_style": "balanced",
+    "interests": [
+      "food",
+      "culture",
+      "photography"
+    ]
+  },
+  "research_summary": {
+    "city_summary": "Toronto is the most populous city in Canada and the capital of Ontario. It is known for its cultural diversity, business, finance, arts, sports, and cosmopolitan atmosphere.",
+    "seasonal_context": "August in Toronto is summer, with warm temperatures and a vibrant atmosphere. Many outdoor activities and festivals are available.",
+    "transport_notes": [
+      "Toronto has an extensive public transit system including buses, streetcars, and the subway.",
+      "Consider using a PRESTO card for convenient transit payments."
+    ],
+    "budget_notes": [
+      "With a budget of $2200, you can comfortably cover accommodation, meals, transportation, and some activities.",
+      "Allocate some funds for spontaneous dining and cultural experiences."
+    ]
+  },
+  "places": [
+    {
+      "name": "Distillery District",
+      "category": "Historic Site",
+      "neighborhood": "Downtown",
+      "best_time_of_day": "Evening",
+      "estimated_duration_minutes": 120,
+      "crowd_level_estimate": "Moderate",
+      "general_description": "A pedestrian-only village with cobblestone streets and Victorian industrial architecture.",
+      "things_to_do": [
+        "Explore art galleries, shops, and restaurants."
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "CN Tower",
+      "category": "Landmark",
+      "neighborhood": "Downtown",
+      "best_time_of_day": "Afternoon",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "High",
+      "general_description": "An iconic communications and observation tower with a glass floor and EdgeWalk experience.",
+      "things_to_do": [
+        "Visit the observation decks and consider the EdgeWalk for thrill-seekers."
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "Art Gallery of Ontario",
+      "category": "Museum",
+      "neighborhood": "Downtown",
+      "best_time_of_day": "Morning",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "Moderate",
+      "general_description": "One of the largest art museums in North America with a vast collection of artworks.",
+      "things_to_do": [
+        "Explore the permanent and temporary exhibitions."
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "Kensington Market",
+      "category": "Market",
+      "neighborhood": "Chinatown",
+      "best_time_of_day": "Afternoon",
+      "estimated_duration_minutes": 120,
+      "crowd_level_estimate": "High",
+      "general_description": "A pedestrian-only commercial area filled with shops, cafes, and street food.",
+      "things_to_do": [
+        "Browse unique shops and try diverse street food."
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "Royal Ontario Museum",
+      "category": "Museum",
+      "neighborhood": "Midtown",
+      "best_time_of_day": "Morning",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "Moderate",
+      "general_description": "A world-renowned museum with diverse collections from world cultures and natural history.",
+      "things_to_do": [
+        "Explore the dinosaur exhibits and the Crystal Gallery."
+      ],
+      "source_confidence": "High"
+    },
+    {
+      "name": "High Park",
+      "category": "Park",
+      "neighborhood": "West End",
+      "best_time_of_day": "Afternoon",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "Low to Moderate",
+      "general_description": "A large urban park with gardens, a zoo, and scenic trails.",
+      "things_to_do": [
+        "Visit the High Park Zoo and enjoy a picnic."
+      ],
+      "source_confidence": "High"
+    }
+  ],
+  "itinerary_days": [
+    {
+      "day": 1,
+      "theme": "Cultural Exploration",
+      "items": [
+        {
+          "item_id": "1",
+          "title": "Art Gallery of Ontario",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "place_name": "Art Gallery of Ontario",
+          "neighborhood": "Downtown",
+          "activity_type": "Museum Visit",
+          "estimated_cost": "25",
+          "transit_note": "Take the subway to Osgoode Station.",
+          "why_this_fits": "Aligns with interest in culture and photography."
+        },
+        {
+          "item_id": "2",
+          "title": "Distillery District",
+          "start_time": "13:00",
+          "end_time": "15:00",
+          "place_name": "Distillery District",
+          "neighborhood": "Downtown",
+          "activity_type": "Historic Site Visit",
+          "estimated_cost": "0",
+          "transit_note": "Walk from Art Gallery of Ontario.",
+          "why_this_fits": "Aligns with interest in culture and photography."
+        },
+        {
+          "item_id": "3",
+          "title": "Dinner at Distillery District",
+          "start_time": "15:30",
+          "end_time": "17:00",
+          "place_name": "Distillery District",
+          "neighborhood": "Downtown",
+          "activity_type": "Dining",
+          "estimated_cost": "50",
+          "transit_note": "Walk from Distillery District.",
+          "why_this_fits": "Aligns with interest in food."
+        },
+        {
+          "item_id": "4",
+          "title": "Evening at Distillery District",
+          "start_time": "17:30",
+          "end_time": "19:30",
+          "place_name": "Distillery District",
+          "neighborhood": "Downtown",
+          "activity_type": "Photography",
+          "estimated_cost": "0",
+          "transit_note": "Walk from Distillery District.",
+          "why_this_fits": "Aligns with interest in photography."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "Landmark and Museum Day",
+      "items": [
+        {
+          "item_id": "5",
+          "title": "Royal Ontario Museum",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "place_name": "Royal Ontario Museum",
+          "neighborhood": "Midtown",
+          "activity_type": "Museum Visit",
+          "estimated_cost": "25",
+          "transit_note": "Take the subway to Museum Station.",
+          "why_this_fits": "Aligns with interest in culture."
+        },
+        {
+          "item_id": "6",
+          "title": "Lunch at Royal Ontario Museum",
+          "start_time": "12:30",
+          "end_time": "13:30",
+          "place_name": "Royal Ontario Museum",
+          "neighborhood": "Midtown",
+          "activity_type": "Dining",
+          "estimated_cost": "20",
+          "transit_note": "Walk from Royal Ontario Museum.",
+          "why_this_fits": "Aligns with interest in food."
+        },
+        {
+          "item_id": "7",
+          "title": "CN Tower",
+          "start_time": "14:00",
+          "end_time": "17:00",
+          "place_name": "CN Tower",
+          "neighborhood": "Downtown",
+          "activity_type": "Landmark Visit",
+          "estimated_cost": "50",
+          "transit_note": "Take the subway to Union Station.",
+          "why_this_fits": "Aligns with interest in culture and photography."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "theme": "Market and Park Day",
+      "items": [
+        {
+          "item_id": "8",
+          "title": "Kensington Market",
+          "start_time": "12:00",
+          "end_time": "14:00",
+          "place_name": "Kensington Market",
+          "neighborhood": "Chinatown",
+          "activity_type": "Market Visit",
+          "estimated_cost": "0",
+          "transit_note": "Take the subway to Spadina Station.",
+          "why_this_fits": "Aligns with interest in food and culture."
+        },
+        {
+          "item_id": "9",
+          "title": "Lunch at Kensington Market",
+          "start_time": "14:30",
+          "end_time": "15:30",
+          "place_name": "Kensington Market",
+          "neighborhood": "Chinatown",
+          "activity_type": "Dining",
+          "estimated_cost": "25",
+          "transit_note": "Walk from Kensington Market.",
+          "why_this_fits": "Aligns with interest in food."
+        },
+        {
+          "item_id": "10",
+          "title": "High Park",
+          "start_time": "16:00",
+          "end_time": "18:00",
+          "place_name": "High Park",
+          "neighborhood": "West End",
+          "activity_type": "Park Visit",
+          "estimated_cost": "0",
+          "transit_note": "Take the subway to High Park Station.",
+          "why_this_fits": "Aligns with interest in nature and photography."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "theme": "Free Day",
+      "items": [
+        {
+          "item_id": "11",
+          "title": "Explore Toronto",
+          "start_time": "09:00",
+          "end_time": "18:00",
+          "place_name": "Various",
+          "neighborhood": "Various",
+          "activity_type": "Free Time",
+          "estimated_cost": "0",
+          "transit_note": "Use public transit as needed.",
+          "why_this_fits": "Allows for spontaneous activities and exploration."
+        }
+      ]
+    }
+  ],
+  "recommended_apps": [
+    {
+      "name": "Transit",
+      "category": "Navigation",
+      "reason": "Helps with navigating Toronto's public transit system."
+    },
+    {
+      "name": "OpenTable",
+      "category": "Dining",
+      "reason": "Assists in finding and booking restaurants."
+    }
+  ],
+  "budget_breakdown": {
+    "lodging": "800",
+    "food": "600",
+    "transport": "200",
+    "activities": "500",
+    "buffer": "100"
+  },
+  "warnings": [
+    "Toronto can be busy during summer festivals; plan accordingly.",
+    "Be mindful of weather changes; pack layers for variable temperatures."
+  ],
+  "media_scenes": [
+    {
+      "scene_id": "1",
+      "itinerary_item_id": "1",
+      "title": "Art Gallery of Ontario",
+      "priority": "High",
+      "prompt": "Photograph the diverse art collection displayed within the Art Gallery of Ontario, capturing the interplay of natural light with the architectural details of the building. Ensure the scene includes a variety of artworks, from modern to classical pieces, with a focus on the gallery's interior design and the ambiance created by the lighting.",
+      "style_rules": [
+        "Use natural light for photography."
+      ]
+    },
+    {
+      "scene_id": "2",
+      "itinerary_item_id": "3",
+      "title": "Dinner at Distillery District",
+      "priority": "Medium",
+      "prompt": "Capture the intimate dining experience at a restaurant in Toronto's Distillery District. Focus on the presentation of the dishes, the cozy ambiance of the restaurant, and the charming street views outside. The photo should convey the warmth and character of the area, with a clear view of the historic buildings and cobblestone streets.",
+      "style_rules": [
+        "Focus on food presentation and ambiance."
+      ]
+    },
+    {
+      "scene_id": "3",
+      "itinerary_item_id": "7",
+      "title": "CN Tower",
+      "priority": "High",
+      "prompt": "Photograph the panoramic views of Toronto from the CN Tower. Use a wide-angle lens to capture the cityscape, including the skyline, the lake, and the distant horizon. The image should be taken during the golden hour, with soft, warm lighting that highlights the city's architecture and the serene waters of the lake.",
+      "style_rules": [
+        "Use a wide-angle lens for the cityscape."
+      ]
+    },
+    {
+      "scene_id": "4",
+      "itinerary_item_id": "10",
+      "title": "High Park",
+      "priority": "Medium",
+      "prompt": "Capture the natural beauty of Toronto's High Park, focusing on the scenic trails and the park's wildlife. Photograph the lush greenery, the winding paths, and the serene atmosphere. Include a view of the zoo within the park, showcasing the animals in their natural-like habitats. The photo should be taken during a sunny day, with ample natural light highlighting the park's features.",
+      "style_rules": [
+        "Focus on wildlife and scenic trails."
+      ]
+    }
+  ]
+}

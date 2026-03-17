@@ -1,0 +1,339 @@
+{
+  "request": {
+    "destination": "Paris",
+    "duration_days": 4,
+    "budget_text": "200",
+    "travel_month": "December",
+    "travel_style": "balanced",
+    "interests": [
+      "food",
+      "culture",
+      "photography"
+    ]
+  },
+  "research_summary": {
+    "city_summary": "Dense, walkable city with strong museum, food, and landmark coverage across central neighborhoods.",
+    "seasonal_context": "Cool or cold season context. Shorter daylight and heavier outerwear may matter.",
+    "transport_notes": [
+      "Use the Metro for most cross-city movements.",
+      "Cluster activities by arrondissement to reduce transit time."
+    ],
+    "budget_notes": [
+      "Use one paid anchor attraction per day to keep spending predictable.",
+      "Cluster meals and major attractions by neighborhood to reduce transport waste.",
+      "Budget appears tight for a comfort-first trip, so prioritize free landmarks and casual dining."
+    ]
+  },
+  "places": [
+    {
+      "name": "Eiffel Tower",
+      "category": "landmark",
+      "neighborhood": "7th arrondissement",
+      "best_time_of_day": "sunset",
+      "estimated_duration_minutes": 90,
+      "crowd_level_estimate": "high",
+      "general_description": "Iconic Paris landmark with the best ambience in late afternoon into evening.",
+      "things_to_do": [
+        "tower exterior photos",
+        "Champ de Mars stroll",
+        "nearby river views"
+      ],
+      "source_confidence": "medium"
+    },
+    {
+      "name": "Louvre Museum",
+      "category": "museum",
+      "neighborhood": "1st arrondissement",
+      "best_time_of_day": "morning",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "high",
+      "general_description": "Large museum best approached with a focused route rather than a full-day attempt.",
+      "things_to_do": [
+        "masterpiece highlights",
+        "courtyard photos",
+        "Richelieu wing walk"
+      ],
+      "source_confidence": "medium"
+    },
+    {
+      "name": "Le Marais",
+      "category": "district",
+      "neighborhood": "3rd and 4th arrondissement",
+      "best_time_of_day": "afternoon",
+      "estimated_duration_minutes": 150,
+      "crowd_level_estimate": "medium",
+      "general_description": "Walkable historic district with boutiques, cafes, and good casual food options.",
+      "things_to_do": [
+        "street wandering",
+        "coffee stop",
+        "shopping",
+        "people watching"
+      ],
+      "source_confidence": "medium"
+    }
+  ],
+  "itinerary_days": [
+    {
+      "day": 1,
+      "theme": "Paris day 1",
+      "items": [
+        {
+          "item_id": "day1-morning",
+          "title": "Explore Eiffel Tower",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Eiffel Tower",
+          "neighborhood": "7th arrondissement",
+          "activity_type": "landmark",
+          "estimated_cost": "$25-40",
+          "transit_note": "Use the Metro for most cross-city movements.",
+          "why_this_fits": "Fits food, culture and works best in the sunset."
+        },
+        {
+          "item_id": "day1-evening",
+          "title": "Slow evening around Louvre Museum",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Louvre Museum",
+          "neighborhood": "1st arrondissement",
+          "activity_type": "museum",
+          "estimated_cost": "$35-60",
+          "transit_note": "Cluster activities by arrondissement to reduce transit time.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "Paris day 2",
+      "items": [
+        {
+          "item_id": "day2-morning",
+          "title": "Explore Louvre Museum",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Louvre Museum",
+          "neighborhood": "1st arrondissement",
+          "activity_type": "museum",
+          "estimated_cost": "$25-40",
+          "transit_note": "Use the Metro for most cross-city movements.",
+          "why_this_fits": "Fits food, culture and works best in the morning."
+        },
+        {
+          "item_id": "day2-evening",
+          "title": "Slow evening around Le Marais",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Le Marais",
+          "neighborhood": "3rd and 4th arrondissement",
+          "activity_type": "district",
+          "estimated_cost": "$35-60",
+          "transit_note": "Cluster activities by arrondissement to reduce transit time.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "theme": "Paris day 3",
+      "items": [
+        {
+          "item_id": "day3-morning",
+          "title": "Explore Le Marais",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Le Marais",
+          "neighborhood": "3rd and 4th arrondissement",
+          "activity_type": "district",
+          "estimated_cost": "$25-40",
+          "transit_note": "Use the Metro for most cross-city movements.",
+          "why_this_fits": "Fits food, culture and works best in the afternoon."
+        },
+        {
+          "item_id": "day3-evening",
+          "title": "Slow evening around Eiffel Tower",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Eiffel Tower",
+          "neighborhood": "7th arrondissement",
+          "activity_type": "landmark",
+          "estimated_cost": "$35-60",
+          "transit_note": "Cluster activities by arrondissement to reduce transit time.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "theme": "Paris day 4",
+      "items": [
+        {
+          "item_id": "day4-morning",
+          "title": "Explore Eiffel Tower",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Eiffel Tower",
+          "neighborhood": "7th arrondissement",
+          "activity_type": "landmark",
+          "estimated_cost": "$25-40",
+          "transit_note": "Use the Metro for most cross-city movements.",
+          "why_this_fits": "Fits food, culture and works best in the sunset."
+        },
+        {
+          "item_id": "day4-evening",
+          "title": "Slow evening around Louvre Museum",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Louvre Museum",
+          "neighborhood": "1st arrondissement",
+          "activity_type": "museum",
+          "estimated_cost": "$35-60",
+          "transit_note": "Cluster activities by arrondissement to reduce transit time.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    }
+  ],
+  "recommended_apps": [
+    {
+      "name": "Citymapper",
+      "category": "transport",
+      "reason": "Reliable route planning for Metro and buses."
+    },
+    {
+      "name": "TheFork",
+      "category": "food",
+      "reason": "Useful for restaurant discovery and reservations."
+    },
+    {
+      "name": "GetYourGuide",
+      "category": "activities",
+      "reason": "Good for timed-entry bookings and tours."
+    }
+  ],
+  "budget_breakdown": {
+    "lodging": "35-45% of total budget",
+    "food": "20-25% of total budget",
+    "transport": "10-15% of total budget",
+    "activities": "15-25% of total budget",
+    "buffer": "10% contingency"
+  },
+  "warnings": [
+    "Opening hours and event listings are not yet connected to live providers.",
+    "Weather is seasonal guidance, not a live forecast."
+  ],
+  "media_scenes": [
+    {
+      "scene_id": "scene-day1-morning",
+      "itinerary_item_id": "day1-morning",
+      "title": "Morning at Eiffel Tower",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Eiffel Tower in 7th arrondissement during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day1-evening",
+      "itinerary_item_id": "day1-evening",
+      "title": "Evening at Louvre Museum",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Louvre Museum in 1st arrondissement during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day2-morning",
+      "itinerary_item_id": "day2-morning",
+      "title": "Morning at Louvre Museum",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Louvre Museum in 1st arrondissement during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day2-evening",
+      "itinerary_item_id": "day2-evening",
+      "title": "Evening at Le Marais",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Le Marais in 3rd and 4th arrondissement during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day3-morning",
+      "itinerary_item_id": "day3-morning",
+      "title": "Morning at Le Marais",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Le Marais in 3rd and 4th arrondissement during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day3-evening",
+      "itinerary_item_id": "day3-evening",
+      "title": "Evening at Eiffel Tower",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Eiffel Tower in 7th arrondissement during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day4-morning",
+      "itinerary_item_id": "day4-morning",
+      "title": "Morning at Eiffel Tower",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Eiffel Tower in 7th arrondissement during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day4-evening",
+      "itinerary_item_id": "day4-evening",
+      "title": "Evening at Louvre Museum",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Paris featuring Louvre Museum in 1st arrondissement during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, cool or cold season context. shorter daylight and heavier outerwear may matter. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture, photography.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    }
+  ]
+}

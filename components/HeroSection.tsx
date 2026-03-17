@@ -1,28 +1,27 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, MapPin, Calendar, DollarSign, Heart } from 'lucide-react';
+import { Search, MapPin, Calendar, DollarSign, Heart, NotebookPen, UserRound } from 'lucide-react';
 import { useState } from 'react';
 import Globe from './Globe';
+import type { TripFormData } from '../lib/trip-types';
 
 interface HeroSectionProps {
-  onGenerateTrip: (data: TripData) => void;
+  onGenerateTrip: (data: TripFormData) => void;
+  isGenerating: boolean;
 }
 
-interface TripData {
-  destination: string;
-  duration: string;
-  budget: string;
-  interests: string[];
-}
-
-export default function HeroSection({ onGenerateTrip }: HeroSectionProps) {
+export default function HeroSection({ onGenerateTrip, isGenerating }: HeroSectionProps) {
   const [destination, setDestination] = useState('');
   const [duration, setDuration] = useState('');
   const [budget, setBudget] = useState('');
   const [interests, setInterests] = useState<string[]>([]);
+  const [travelDates, setTravelDates] = useState('');
+  const [travelStyle, setTravelStyle] = useState('balanced');
+  const [tripNotes, setTripNotes] = useState('');
 
   const interestOptions = ['Food', 'Nightlife', 'Culture', 'Nature', 'Adventure', 'Relaxation'];
+  const travelStyleOptions = ['balanced', 'luxury', 'budget', 'slow', 'family', 'solo'];
 
   const toggleInterest = (interest: string) => {
     setInterests(prev =>
@@ -34,8 +33,15 @@ export default function HeroSection({ onGenerateTrip }: HeroSectionProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Trip data:', { destination, duration, budget, interests });
-    onGenerateTrip({ destination, duration, budget, interests });
+    onGenerateTrip({
+      destination,
+      duration,
+      budget,
+      interests,
+      travelDates,
+      travelStyle,
+      tripNotes,
+    });
   };
 
   return (
@@ -147,6 +153,23 @@ export default function HeroSection({ onGenerateTrip }: HeroSectionProps) {
                     focus: { scale: 1.02 },
                   }}
                 >
+                  <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5 transition-colors group-focus-within:text-cyan-300" />
+                  <input
+                    type="text"
+                    placeholder="Travel Dates (e.g., 2026-08-10 to 2026-08-14)"
+                    value={travelDates}
+                    onChange={(e) => setTravelDates(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:bg-white/10 focus:border-cyan-400 transition-all"
+                    required
+                  />
+                </motion.div>
+                <motion.div 
+                  className="relative group"
+                  whileFocus="focus"
+                  variants={{
+                    focus: { scale: 1.02 },
+                  }}
+                >
                   <DollarSign className="absolute left-4 top-1/2 transform -translate-y-1/2 text-green-400 w-5 h-5 transition-colors group-focus-within:text-green-300" />
                   <input
                     type="text"
@@ -157,6 +180,51 @@ export default function HeroSection({ onGenerateTrip }: HeroSectionProps) {
                     required
                   />
                 </motion.div>
+              </div>
+
+              <div className="grid md:grid-cols-[1.3fr,1fr] gap-6">
+                <motion.div
+                  className="relative group"
+                  whileFocus="focus"
+                  variants={{
+                    focus: { scale: 1.02 },
+                  }}
+                >
+                  <NotebookPen className="absolute left-4 top-5 text-pink-400 w-5 h-5 transition-colors group-focus-within:text-pink-300" />
+                  <textarea
+                    placeholder="Optional trip notes: health constraints, walking limits, dislikes, preferred pace, accessibility needs..."
+                    value={tripNotes}
+                    onChange={(e) => setTripNotes(e.target.value)}
+                    className="w-full min-h-32 pl-12 pr-4 py-4 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white/10 focus:border-pink-400 transition-all resize-none"
+                  />
+                </motion.div>
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <UserRound className="text-cyan-300 w-5 h-5" />
+                    <span className="text-white font-semibold">Traveller Style</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {travelStyleOptions.map((style) => (
+                      <motion.button
+                        key={style}
+                        type="button"
+                        onClick={() => setTravelStyle(style)}
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
+                        className={`rounded-2xl px-3 py-3 text-sm font-medium capitalize transition-all ${
+                          travelStyle === style
+                            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30'
+                            : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white border border-white/20'
+                        }`}
+                      >
+                        {style}
+                      </motion.button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-1 gap-6">
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-2">
                     <Heart className="text-pink-400 w-5 h-5" />
@@ -189,12 +257,13 @@ export default function HeroSection({ onGenerateTrip }: HeroSectionProps) {
                 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
+                disabled={isGenerating}
                 className="w-full bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 text-white py-4 px-8 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center space-x-2">
                   <Search className="w-5 h-5" />
-                  <span>✨ Generate My AI Trip</span>
+                  <span>{isGenerating ? 'Generating Your Live Trip...' : '✨ Generate My AI Trip'}</span>
                 </div>
               </motion.button>
             </form>

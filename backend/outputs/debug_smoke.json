@@ -1,0 +1,279 @@
+{
+  "request": {
+    "destination": "Tokyo",
+    "duration_days": 3,
+    "budget_text": "1800",
+    "travel_month": "April",
+    "travel_style": "balanced",
+    "interests": [
+      "food",
+      "culture"
+    ]
+  },
+  "research_summary": {
+    "city_summary": "Large, transit-heavy city where neighborhood clustering matters more than straight-line distance.",
+    "seasonal_context": "Spring shoulder season context with variable temperatures and moderate daylight.",
+    "transport_notes": [
+      "Rail is usually the fastest option.",
+      "Plan by district to avoid excessive transfers."
+    ],
+    "budget_notes": [
+      "Use one paid anchor attraction per day to keep spending predictable.",
+      "Cluster meals and major attractions by neighborhood to reduce transport waste."
+    ]
+  },
+  "places": [
+    {
+      "name": "Senso-ji",
+      "category": "temple",
+      "neighborhood": "Asakusa",
+      "best_time_of_day": "morning",
+      "estimated_duration_minutes": 90,
+      "crowd_level_estimate": "medium",
+      "general_description": "Historic temple area that works well as an early-day cultural stop.",
+      "things_to_do": [
+        "temple grounds",
+        "Nakamise shopping street",
+        "traditional snack stop"
+      ],
+      "source_confidence": "medium"
+    },
+    {
+      "name": "Shibuya",
+      "category": "district",
+      "neighborhood": "Shibuya",
+      "best_time_of_day": "evening",
+      "estimated_duration_minutes": 180,
+      "crowd_level_estimate": "high",
+      "general_description": "High-energy area suited to nightlife, shopping, and city atmosphere.",
+      "things_to_do": [
+        "crossing views",
+        "shopping",
+        "dinner",
+        "night walk"
+      ],
+      "source_confidence": "medium"
+    },
+    {
+      "name": "Meiji Shrine",
+      "category": "cultural",
+      "neighborhood": "Harajuku",
+      "best_time_of_day": "morning",
+      "estimated_duration_minutes": 120,
+      "crowd_level_estimate": "low",
+      "general_description": "Quiet shrine precinct that balances busier urban districts nearby.",
+      "things_to_do": [
+        "forest walk",
+        "shrine visit",
+        "photo stop"
+      ],
+      "source_confidence": "medium"
+    }
+  ],
+  "itinerary_days": [
+    {
+      "day": 1,
+      "theme": "Tokyo day 1",
+      "items": [
+        {
+          "item_id": "day1-morning",
+          "title": "Explore Senso-ji",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Senso-ji",
+          "neighborhood": "Asakusa",
+          "activity_type": "temple",
+          "estimated_cost": "$25-40",
+          "transit_note": "Rail is usually the fastest option.",
+          "why_this_fits": "Fits food, culture and works best in the morning."
+        },
+        {
+          "item_id": "day1-evening",
+          "title": "Slow evening around Shibuya",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Shibuya",
+          "neighborhood": "Shibuya",
+          "activity_type": "district",
+          "estimated_cost": "$35-60",
+          "transit_note": "Plan by district to avoid excessive transfers.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "Tokyo day 2",
+      "items": [
+        {
+          "item_id": "day2-morning",
+          "title": "Explore Shibuya",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Shibuya",
+          "neighborhood": "Shibuya",
+          "activity_type": "district",
+          "estimated_cost": "$25-40",
+          "transit_note": "Rail is usually the fastest option.",
+          "why_this_fits": "Fits food, culture and works best in the evening."
+        },
+        {
+          "item_id": "day2-evening",
+          "title": "Slow evening around Meiji Shrine",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Meiji Shrine",
+          "neighborhood": "Harajuku",
+          "activity_type": "cultural",
+          "estimated_cost": "$35-60",
+          "transit_note": "Plan by district to avoid excessive transfers.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "theme": "Tokyo day 3",
+      "items": [
+        {
+          "item_id": "day3-morning",
+          "title": "Explore Meiji Shrine",
+          "start_time": "09:00",
+          "end_time": "11:30",
+          "place_name": "Meiji Shrine",
+          "neighborhood": "Harajuku",
+          "activity_type": "cultural",
+          "estimated_cost": "$25-40",
+          "transit_note": "Rail is usually the fastest option.",
+          "why_this_fits": "Fits food, culture and works best in the morning."
+        },
+        {
+          "item_id": "day3-evening",
+          "title": "Slow evening around Senso-ji",
+          "start_time": "17:00",
+          "end_time": "20:00",
+          "place_name": "Senso-ji",
+          "neighborhood": "Asakusa",
+          "activity_type": "temple",
+          "estimated_cost": "$35-60",
+          "transit_note": "Plan by district to avoid excessive transfers.",
+          "why_this_fits": "Balances the day with a balanced pace and a stronger evening atmosphere."
+        }
+      ]
+    }
+  ],
+  "recommended_apps": [
+    {
+      "name": "Google Maps",
+      "category": "transport",
+      "reason": "Strong for train timing and station exits."
+    },
+    {
+      "name": "Tabelog",
+      "category": "food",
+      "reason": "Useful for restaurant rankings in Japan."
+    },
+    {
+      "name": "Klook",
+      "category": "activities",
+      "reason": "Good for attraction and transport bookings."
+    }
+  ],
+  "budget_breakdown": {
+    "lodging": "35-45% of total budget",
+    "food": "20-25% of total budget",
+    "transport": "10-15% of total budget",
+    "activities": "15-25% of total budget",
+    "buffer": "10% contingency"
+  },
+  "warnings": [
+    "Opening hours and event listings are not yet connected to live providers.",
+    "Weather is seasonal guidance, not a live forecast."
+  ],
+  "media_scenes": [
+    {
+      "scene_id": "scene-day1-morning",
+      "itinerary_item_id": "day1-morning",
+      "title": "Morning at Senso-ji",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Tokyo featuring Senso-ji in Asakusa during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, spring shoulder season context with variable temperatures and moderate daylight. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day1-evening",
+      "itinerary_item_id": "day1-evening",
+      "title": "Evening at Shibuya",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Tokyo featuring Shibuya in Shibuya during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, spring shoulder season context with variable temperatures and moderate daylight. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day2-morning",
+      "itinerary_item_id": "day2-morning",
+      "title": "Morning at Shibuya",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Tokyo featuring Shibuya in Shibuya during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, spring shoulder season context with variable temperatures and moderate daylight. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day2-evening",
+      "itinerary_item_id": "day2-evening",
+      "title": "Evening at Meiji Shrine",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Tokyo featuring Meiji Shrine in Harajuku during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, spring shoulder season context with variable temperatures and moderate daylight. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day3-morning",
+      "itinerary_item_id": "day3-morning",
+      "title": "Morning at Meiji Shrine",
+      "priority": "high",
+      "prompt": "A photorealistic premium travel scene in Tokyo featuring Meiji Shrine in Harajuku during the 09:00 to 11:30 part of the itinerary. Reflect a balanced trip style, spring shoulder season context with variable temperatures and moderate daylight. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    },
+    {
+      "scene_id": "scene-day3-evening",
+      "itinerary_item_id": "day3-evening",
+      "title": "Evening at Senso-ji",
+      "priority": "medium",
+      "prompt": "A photorealistic premium travel scene in Tokyo featuring Senso-ji in Asakusa during the 17:00 to 20:00 part of the itinerary. Reflect a balanced trip style, spring shoulder season context with variable temperatures and moderate daylight. Show realistic crowd density, subtle local atmosphere, and activities connected to food, culture.",
+      "style_rules": [
+        "Photorealistic travel photography with cinematic composition.",
+        "Keep landmarks geographically plausible and avoid fantasy elements.",
+        "Show season, weather, time of day, and crowd level consistent with the itinerary context.",
+        "Use natural lighting and a premium editorial travel aesthetic.",
+        "Do not include text overlays, logos, watermarks, or collage layouts."
+      ]
+    }
+  ]
+}

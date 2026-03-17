@@ -2,51 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Clock, Coffee, Camera, Moon } from 'lucide-react';
+import type { TripPlan } from '../lib/trip-types';
 
-const timelineItems = [
-  {
-    time: '8:00 AM',
-    icon: Coffee,
-    title: 'Morning Coffee & Breakfast',
-    description: 'Start your day at a local café with fresh pastries and artisanal coffee.',
-    period: 'morning',
-  },
-  {
-    time: '10:00 AM',
-    icon: Camera,
-    title: 'Historic Museum Visit',
-    description: 'Explore fascinating exhibits and learn about the city\'s rich history.',
-    period: 'morning',
-  },
-  {
-    time: '12:00 PM',
-    icon: Coffee,
-    title: 'Lunch at Food District',
-    description: 'Enjoy authentic local cuisine at a recommended restaurant.',
-    period: 'afternoon',
-  },
-  {
-    time: '2:00 PM',
-    icon: Camera,
-    title: 'Central Park Exploration',
-    description: 'Take a relaxing walk through beautiful gardens and scenic views.',
-    period: 'afternoon',
-  },
-  {
-    time: '6:00 PM',
-    icon: Camera,
-    title: 'Sunset Hill Viewpoint',
-    description: 'Witness breathtaking sunset views from the city\'s highest point.',
-    period: 'evening',
-  },
-  {
-    time: '8:00 PM',
-    icon: Moon,
-    title: 'Nightlife Experience',
-    description: 'Dive into the vibrant nightlife with live music and local entertainment.',
-    period: 'evening',
-  },
-];
+interface TripTimelineProps {
+  plan: TripPlan;
+}
 
 const periodColors = {
   morning: 'from-orange-400 to-yellow-400',
@@ -54,7 +14,23 @@ const periodColors = {
   evening: 'from-purple-400 to-pink-400',
 };
 
-export default function TripTimeline() {
+export default function TripTimeline({ plan }: TripTimelineProps) {
+  const timelineItems = plan.itinerary_days.flatMap(day =>
+    day.items.map(item => {
+      const hour = Number.parseInt(item.start_time.split(':')[0] ?? '12', 10);
+      const period = hour < 12 ? 'morning' : hour < 17 ? 'afternoon' : 'evening';
+      const icon = period === 'morning' ? Coffee : period === 'afternoon' ? Camera : Moon;
+      return {
+        key: `${day.day}-${item.item_id}`,
+        time: item.start_time,
+        icon,
+        title: `Day ${day.day}: ${item.title}`,
+        description: `${item.place_name} in ${item.neighborhood}. ${item.why_this_fits}`,
+        period,
+      };
+    })
+  );
+
   return (
     <section className="py-16 px-6 max-w-4xl mx-auto">
       <motion.div
@@ -80,7 +56,7 @@ export default function TripTimeline() {
         <div className="space-y-8">
           {timelineItems.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={item.key}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
